@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Início";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="text-center" id="main">
+                <div>
+                    <img src="~/src/AquiOuAcola.png" width="400px" height="200px" />
+                </div>
+
+                <div id="buscador">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar um curso..." aria-label="Search">
+                        <button class="btn btn-secondary" type="submit">Buscar</button>
+                    </form>
+                </div>
+
+                <div id="span">
+                    <a href="#" style="text-decoration: none;">EU PRECISO DE AJUDA</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
 </div>
