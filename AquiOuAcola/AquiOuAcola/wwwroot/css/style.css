@@ -1,23 +1,39 @@
-﻿body {
-    background-color: #f5f5f5;
-}
-
-#main{
+﻿#main {
     margin: 50px;
+    display: block;
+    text-align: center;
 }
 
 #buscador{
     margin-top: 50px;
 }
 
-#buscar{
+#buscar {
+    height: 50px;
     background-color: #C4C4C4;
-    border: none;
     border-radius: 100px;
-    padding: 15px;
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+}
+
+#buscar input{
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #C4C4C4;
+    padding-left: 15px;
 }
 
 #span{
     margin-top: 25px;
+}
+
+#span a{
+    text-decoration: none;
+    color: #00345C;
+}
+
+#span a:hover{
+    color: #6F8197;
 }

@@ -12,40 +12,19 @@
 <body>
     
     <div class="container">
-        <!--
+
         <header>
-            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-                <div class="container">
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AquiOuAcola</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+            <nav class="navbar navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/Home/Index">
+                        <img src="/src/AquiOuAcola.png" alt="" width="100" height="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="background-color: #ED4032;">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                        <ul class="navbar-nav flex-grow-1">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </nav>
         </header>
-        -->
-
-        <nav class="navbar navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/Home/Index">
-                    <img src="/src/AquiOuAcola.png" alt="" width="100" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="background-color: #ED4032;">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
 
         <div class="offcanvas offcanvas-end d-flex flex-column flex-shrink-0 p-3" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 350px; background-color: #ED4032; color: white;">
 
@@ -54,13 +33,13 @@
 
                 <div class="nav-item text-center" style="display: block; margin-top:25px; margin-bottom:50px;">
                     <div>
-                        <img src="https://github.com/mdo.png" alt="" width="175" height="175" class="rounded-circle me-2">
+                        <img src="~/src/FotoDePerfil.png" alt="" width="175" height="175" class="rounded-circle me-2">
                     </div>
                     <div style="font-size: 32px;">
                         <strong>Usuário</strong>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-outline-warning btn-sm">Sair</button>
+                        <button type="button" class="btn btn-outline-light btn-sm">Sair</button>
                     </div>
                 </div>
 
@@ -113,6 +92,7 @@
             </div>
         </footer>
         -->
+
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

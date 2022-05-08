@@ -2,33 +2,29 @@
     ViewData["Title"] = "Início";
 }
 
-<div>
+<div class="container">
     <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10">
-            <div class="text-center" id="main">
+        <div class="col col-lg-1"></div>
+        <div class="col col-12 col-lg-10 col-sm-12">
+            <div id="main">
                 <div>
-                    <img src="~/src/AquiOuAcola.png" width="400px" height="200px" />
+                    <img src="~/src/AquiOuAcola.png" style="max-width: 100%" />
                 </div>
 
                 <div id="buscador">
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar um curso..." aria-label="Search" id="buscar">
-                        <!--<button class="btn btn-secondary" type="submit">Buscar</button>-->
+                    <form>
+                        <div class="form-group" id="buscar">
+                            <i class="bi bi-search"></i>
+                            <input class="form-control" type="text" placeholder="Buscar um curso...">
+                        </div>
                     </form>
-                    <!--
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar um curso..." aria-label="Search">
-                        <button class="btn btn-secondary" type="submit">Buscar</button>
-                    </form>
-                     -->
                 </div>
 
                 <div id="span">
-                    <a href="#" style="text-decoration: none;">EU PRECISO DE AJUDA</a>
+                    <a href="#">EU PRECISO DE AJUDA</a>
                 </div>
             </div>
         </div>
-        <div class="col-1"></div>
+        <div class="col col-lg-1"></div>
     </div>
 </div>
