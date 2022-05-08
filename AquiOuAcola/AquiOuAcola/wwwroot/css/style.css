@@ -18,7 +18,11 @@
 }
 
 #buscar input{
+    flex: 1;
     height: 40px;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 100px;
     border: none;
     outline: none;
     background-color: #C4C4C4;
