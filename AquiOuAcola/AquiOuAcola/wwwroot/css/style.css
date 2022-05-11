@@ -41,3 +41,16 @@
 #span a:hover{
     color: #6F8197;
 }
+
+.input {
+    height: 40px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    background-color: #C4C4C4;
+}
+
+#formdisplay {
+    display: flex;
+    justify-content: center;
+}
