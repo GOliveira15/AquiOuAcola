@@ -48,9 +48,14 @@
     border: none;
     outline: none;
     background-color: #C4C4C4;
+    margin-bottom: 15px;
 }
 
 #formdisplay {
     display: flex;
     justify-content: center;
+}
+
+#f1{
+    padding-right: 15px;
 }
