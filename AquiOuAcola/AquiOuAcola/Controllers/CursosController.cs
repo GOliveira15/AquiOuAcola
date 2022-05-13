@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace AquiOuAcola.Controllers
 {
-    public class UsuariosController : Controller
+    public class CursosController : Controller
     {
-        // GET: UsuariosController
+        // GET: CursosController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: UsuariosController/Details/5
+        // GET: CursosController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: UsuariosController/Create
+        // GET: CursosController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: UsuariosController/Create
+        // POST: CursosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -42,13 +42,13 @@ namespace AquiOuAcola.Controllers
             }
         }
 
-        // GET: UsuariosController/Edit/5
+        // GET: CursosController/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: UsuariosController/Edit/5
+        // POST: CursosController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)
@@ -63,13 +63,13 @@ namespace AquiOuAcola.Controllers
             }
         }
 
-        // GET: UsuariosController/Delete/5
+        // GET: CursosController/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: UsuariosController/Delete/5
+        // POST: CursosController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, IFormCollection collection)
