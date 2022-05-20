@@ -2,6 +2,7 @@
     margin: 50px;
     display: block;
     text-align: center;
+    margin-top: 75px;
 }
 
 #buscador{
@@ -119,4 +120,11 @@
 
 footer{
     margin-top: 50px;
+}
+
+#cursoMain{
+    display: block;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }

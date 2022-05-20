@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +24,7 @@ namespace AquiOuAcola
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
+            services.AddDbContext<Contexto>(a => a.UseMySQL("server=localhost;database=aquiouacola;user=root;password=;SslMode=none"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
