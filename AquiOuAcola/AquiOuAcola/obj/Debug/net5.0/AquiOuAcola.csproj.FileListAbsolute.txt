@@ -886,4 +886,4 @@ C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcol
 C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcola\obj\Debug\net5.0\ref\AquiOuAcola.dll
 C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcola\obj\Debug\net5.0\AquiOuAcola.pdb
 C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcola\obj\Debug\net5.0\AquiOuAcola.genruntimeconfig.cache
-C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcola\obj\Debug\net5.0\Razor\Views\Cursos\terra.cshtml.g.cs
+C:\Users\0220482113002\Documents\Nova pasta\aqui-ou-acola\AquiOuAcola\AquiOuAcola\obj\Debug\net5.0\Razor\Views\Usuarios\Configuracoes.cshtml.g.cs

@@ -82,5 +82,11 @@ namespace AquiOuAcola.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult Configuracoes()
+        {
+            return View();
+        }
+
     }
 }
