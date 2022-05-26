@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,8 @@ using AquiOuAcola.Entidades;
 
 namespace AquiOuAcola.Controllers
 {
+    [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
     public class UsuariosController : Controller
     {
         private readonly Contexto db;

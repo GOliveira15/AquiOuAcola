@@ -36,9 +36,30 @@
                         <img src="~/src/FotoDePerfil.png" alt="" width="175" height="175" class="rounded-circle me-2">
                     </div>
                     <div style="font-size: 32px;">
+                        @{
+                            if (true)
+                            {
+                                <strong>Nome</strong>
+                            }
+                            else
+                            {
+                                <strong>Entre ou Cadastre-se</strong>
+                            }
+                        }
                         <strong>Usuário</strong>
                     </div>
                     <div>
+                        @{
+                            if (true)
+                            {
+                                <a class="btn btn-outline-light btn-sm" href="~/Login/Logoff">Sair</a>
+                            }
+                            else
+                            {
+                                <a class="btn btn-outline-light btn-sm" href="~/Login/Entrar">Entrar</a>
+                            }
+                        }
+
                         <a class="btn btn-outline-light btn-sm" href="~/Login/Logoff">Sair</a>
                     </div>
                 </div>
