@@ -10,10 +10,17 @@ namespace AquiOuAcola.Controllers
 {
     public class CursosController : Controller
     {
+        private readonly Contexto db;
+
+        public CursosController(Contexto contexto)
+        {
+            db = contexto;
+        }
+
         // GET: CursosController
         public ActionResult Index()
         {
-            return View();
+            return View(db.Cursos.ToList());
         }
 
         // GET: CursosController/Details/5
