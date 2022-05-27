@@ -5,18 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container-fluid">
+<div class="container-fluid" id="cadastroMain">
     <h1 class="text-center">Compartilhe um curso!</h1>
 
     <form asp-action="Create" id="createMain">
-        <div>
-            <div class="row">
-                
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="d-flex">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <img src="~/src/FotoDePerfil.png" style="width: 150px;" />
                     </div>
-                    <div class="col-8">
+                    <div class="col-md-9">
+
                         <div class="form-group">
                             <label asp-for="nome" class="control-label">Nome</label>
                             <input asp-for="nome" class="form-control input" />
@@ -43,30 +44,21 @@
                         </div>
                     </div>
                 </div>
-                
-            </div>
 
-            <div class="row">
-                
-                <div class="d-block">
-                    <div class="col-md-10">
-                        <div class="form-group">
-                            <label asp-for="descricao" class="control-label">Descrição</label>
-                            <input asp-for="descricao" class="form-control input2" style="height: 150px;" />
-                            <span asp-validation-for="descricao" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-10">
-                        <div>
-                            <label asp-for="nivel" class="control-label">Nível</label>
-                            <input type="radio" name="nivel" value="iniciante" /> Iniciante
-                            <input type="radio" name="nivel" value="intermediario" /> Intermediário
-                            <input type="radio" name="nivel" value="avancado" /> Avançado
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label asp-for="descricao" class="control-label">Descrição</label>
+                    <input asp-for="descricao" class="form-control input2" style="height: 150px;" />
+                    <span asp-validation-for="descricao" class="text-danger"></span>
                 </div>
-                
+
+                <div>
+                    <label asp-for="nivel" class="control-label">Nível</label>
+                    <input type="radio" name="nivel" value="iniciante" /> Iniciante
+                    <input type="radio" name="nivel" value="intermediario" /> Intermediário
+                    <input type="radio" name="nivel" value="avancado" /> Avançado
+                </div>
             </div>
+            <div class="col-md-1"></div>
         </div>
 
         <div class="row">

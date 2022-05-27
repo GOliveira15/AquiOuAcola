@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 
 namespace AquiOuAcola.Controllers
 {
-    [Authorize(AuthenticationSchemes = "CookieAuthentication")]
-
     public class CursosController : Controller
     {
         // GET: CursosController
@@ -23,6 +21,8 @@ namespace AquiOuAcola.Controllers
         {
             return View();
         }
+
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
 
         // GET: CursosController/Create
         public ActionResult Create()

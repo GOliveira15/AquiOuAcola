@@ -9,8 +9,6 @@ using AquiOuAcola.Entidades;
 
 namespace AquiOuAcola.Controllers
 {
-    [Authorize(AuthenticationSchemes = "CookieAuthentication")]
-
     public class UsuariosController : Controller
     {
         private readonly Contexto db;
@@ -18,18 +16,6 @@ namespace AquiOuAcola.Controllers
         public UsuariosController(Contexto contexto)
         {
             db = contexto;
-        }
-
-        // GET: UsuariosController
-        public ActionResult Index()
-        {
-            return View(db.Usuarios.ToList());
-        }
-
-        // GET: UsuariosController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
         }
 
         // GET: UsuariosController/Create
@@ -55,6 +41,24 @@ namespace AquiOuAcola.Controllers
             }
         }
 
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
+        // GET: UsuariosController
+        public ActionResult Index()
+        {
+            return View(db.Usuarios.ToList());
+        }
+
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
+        // GET: UsuariosController/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
         // GET: UsuariosController/Edit/5
         public ActionResult Edit(int id)
         {
@@ -78,6 +82,8 @@ namespace AquiOuAcola.Controllers
             }
         }
 
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
         // GET: UsuariosController/Delete/5
         public ActionResult Delete(int id)
         {
@@ -85,6 +91,15 @@ namespace AquiOuAcola.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
+
+        public ActionResult Perfil()
+        {
+            return View();
+        }
+
+        [Authorize(AuthenticationSchemes = "CookieAuthentication")]
 
         public ActionResult Configuracoes()
         {
