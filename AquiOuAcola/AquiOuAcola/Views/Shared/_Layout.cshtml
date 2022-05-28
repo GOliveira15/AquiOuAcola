@@ -37,20 +37,22 @@
                     </div>
                     <div style="font-size: 32px;">
                         @{
-                            if (true)
+                            if (User.IsInRole("AcessarCursos"))
                             {
-                                <strong>Nome</strong>
+                                var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+
+                                var Nome = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Name).Value;
+                                <span>@Nome</span>
                             }
                             else
                             {
                                 <strong>Entre ou Cadastre-se</strong>
                             }
                         }
-                        <strong>Usuário</strong>
                     </div>
                     <div>
                         @{
-                            if (true)
+                            if (User.IsInRole("AcessarCursos"))
                             {
                                 <a class="btn btn-outline-light btn-sm" href="~/Login/Logoff">Sair</a>
                             }
@@ -59,8 +61,6 @@
                                 <a class="btn btn-outline-light btn-sm" href="~/Login/Entrar">Entrar</a>
                             }
                         }
-
-                        <a class="btn btn-outline-light btn-sm" href="~/Login/Logoff">Sair</a>
                     </div>
                 </div>
 

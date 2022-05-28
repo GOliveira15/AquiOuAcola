@@ -37,6 +37,7 @@ namespace AquiOuAcola.Controllers
             var claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.Name, usuarioLogado.nome));
             claims.Add(new Claim(ClaimTypes.Sid, usuarioLogado.Id.ToString()));
+            claims.Add(new Claim(ClaimTypes.Role, "AcessarCursos"));
 
             var userIdentity = new ClaimsIdentity(claims, "Acesso");
 
