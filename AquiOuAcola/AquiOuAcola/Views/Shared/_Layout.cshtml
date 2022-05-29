@@ -33,20 +33,29 @@
 
                 <div class="nav-item text-center" style="display: block; margin-top:25px; margin-bottom:50px;">
                     <div>
-                        <img src="~/src/FotoDePerfil.png" alt="" width="175" height="175" class="rounded-circle me-2">
+                        @{
+                            if (User.IsInRole("AcessarCursos"))
+                            {
+                                <img src="~/src/FotoDePerfil.png" alt="" width="175" height="175" class="rounded-circle me-2">
+                            }
+                            else
+                            {
+                                <img src="~/src/FotoDePerfil.png" alt="" width="175" height="175" class="rounded-circle me-2">
+                            }
+                        }
                     </div>
                     <div style="font-size: 32px;">
                         @{
                             if (User.IsInRole("AcessarCursos"))
                             {
                                 var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
-
                                 var Nome = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Name).Value;
-                                <span>@Nome</span>
+
+                                <strong>@Nome</strong>
                             }
                             else
                             {
-                                <strong>Entre ou Cadastre-se</strong>
+                                <strong>Faça parte!</strong>
                             }
                         }
                     </div>
@@ -78,27 +87,21 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/Usuarios/Perfil" class="nav-link link-light">
-                            <!--<i class="bi bi-laptop"></i>-->
-                            Salvos
-                        </a>
-                    </li>
-                    <li>
                         <a href="/Cursos/Create" class="nav-link link-light">
                             <!--<i class="bi bi-laptop"></i>-->
                             Compartilhar
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link link-light">
-                            <!--<i class="bi bi-info-circle"></i>-->
-                            Dúvidas
+                        <a href="/Usuarios/Perfil" class="nav-link link-light">
+                            <!--<i class="bi bi-laptop"></i>-->
+                            Salvos
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link link-light">
-                            <!--<i class="bi bi-laptop"></i>-->
-                            Blog
+                            <!--<i class="bi bi-info-circle"></i>-->
+                            Dúvidas
                         </a>
                     </li>
                     <li>

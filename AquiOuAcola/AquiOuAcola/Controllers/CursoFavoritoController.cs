@@ -16,7 +16,7 @@ namespace AquiOuAcola.Controllers
             db = contexto;
         }
 
-        public IActionResult add(int id)
+        public IActionResult Add(int id)
         {
             var identity = HttpContext.User.Identity as ClaimsIdentity;
             if (identity != null)

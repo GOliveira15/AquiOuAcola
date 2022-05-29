@@ -1,4 +1,4 @@
-﻿@model AquiOuAcola.Models.Curso
+﻿@model AquiOuAcola.Entidades.Curso
 
 @{
     ViewData["Title"] = "Create";
@@ -6,17 +6,20 @@
 }
 
 <div class="container-fluid" id="cadastroMain">
-    <h1 class="text-center">Compartilhe um curso!</h1>
-    <br />
-    <br />
+    <h1 class="text-center" style="margin-bottom: 50px;">Compartilhe um curso!</h1>
 
-    <form asp-action="Create" id="createMain">
+    <form asp-action="Create" enctype="multipart/form-data" id="createMain">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <div class="d-flex">
                     <div class="col-md-3">
-                        <img src="~/src/FotoDePerfil.png" style="width: 150px;" />
+                        <div>
+                            <img src="~/src/FotoDePerfil.png" style="width: 150px;" />
+                        </div>
+                        <div>
+                            <input type="file" name="foto" />
+                        </div>
                     </div>
                     <div class="col-md-9">
 
@@ -32,9 +35,9 @@
                                 <span asp-validation-for="disponibilidade" class="text-danger"></span>
                             </div>
                             <div>
-                                <label asp-for="preco" class="control-label">Gratuito</label>
-                                <input type="radio" name="preco" value="sim" /> Sim
-                                <input type="radio" name="preco" value="nao" /> Não
+                                <label asp-for="gratuito" class="control-label">Gratuito</label><br />
+                                <input class="form-check-input" type="radio" name="gratuito" value="Sim" /> Sim
+                                <input class="form-check-input" type="radio" name="gratuito" value="Nao" /> Não
                             </div>
                         </div>
                         <div>

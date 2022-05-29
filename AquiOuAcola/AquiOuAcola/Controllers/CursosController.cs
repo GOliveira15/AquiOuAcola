@@ -5,16 +5,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AquiOuAcola.Entidades;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
+using System.Configuration;
 
 namespace AquiOuAcola.Controllers
 {
     public class CursosController : Controller
     {
         private readonly Contexto db;
+        private string caminhoServidor;
 
-        public CursosController(Contexto contexto)
+        public CursosController(Contexto contexto, IWebHostEnvironment sistema)
         {
             db = contexto;
+            caminhoServidor = sistema.WebRootPath;
         }
 
         // GET: CursosController
@@ -26,7 +32,7 @@ namespace AquiOuAcola.Controllers
         // GET: CursosController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(db.Cursos.Find(id));
         }
 
         [Authorize(AuthenticationSchemes = "CookieAuthentication")]
@@ -40,10 +46,38 @@ namespace AquiOuAcola.Controllers
         // POST: CursosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Curso collection, IFormFile foto)
         {
             try
             {
+                string caminhoParaSalvarImagem = caminhoServidor + "\\Imagens\\";
+                string novoNomeParaImagem = Guid.NewGuid().ToString() + "_" + foto.FileName;
+
+                if (!Directory.Exists(caminhoParaSalvarImagem))
+                {
+                    Directory.CreateDirectory(caminhoParaSalvarImagem);
+                }
+
+                using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
+                {
+                    foto.CopyToAsync(stream);
+                }
+
+                collection.foto = novoNomeParaImagem;
+
+                Curso _cursos = new Curso();
+
+                _cursos.Id_Usuario = collection.Id_Usuario;
+                _cursos.foto = collection.foto;
+                _cursos.nome = collection.nome;
+                _cursos.disponibilidade = collection.disponibilidade;
+                _cursos.gratuito = collection.gratuito;
+                _cursos.link = collection.link;
+                _cursos.descricao = collection.descricao;
+                _cursos.nivel = collection.nivel;
+
+                db.Cursos.Add(_cursos);
+                db.SaveChanges();
                 return RedirectToAction(nameof(Index));
             }
             catch

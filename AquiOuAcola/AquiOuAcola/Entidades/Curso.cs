@@ -8,6 +8,7 @@ namespace AquiOuAcola.Entidades
     public class Curso
     {
         public int Id { get; set; }
+        public int Id_Usuario { get; set; }
         public string foto { get; set; }
         public string nome { get; set; }
         public string disponibilidade { get; set; }
