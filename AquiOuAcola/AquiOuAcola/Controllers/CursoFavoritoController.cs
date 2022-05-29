@@ -26,7 +26,7 @@ namespace AquiOuAcola.Controllers
                 identity.FindFirst(a => a.Type == ClaimTypes.Sid);
 
             }
-            return View();
+            return View("~/Views/Usuarios/Perfil.cshtml");
         }
     }
 }

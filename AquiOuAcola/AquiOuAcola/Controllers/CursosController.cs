@@ -24,9 +24,16 @@ namespace AquiOuAcola.Controllers
         }
 
         // GET: CursosController
-        public ActionResult Index()
+        public ActionResult Index(string query)
         {
-            return View(db.Cursos.ToList());
+            if (string.IsNullOrEmpty(query))
+            {
+                return View(db.Cursos.ToList());
+            }
+            else
+            {
+                return View(db.Cursos.Where(a => a.nome.Contains(query) || a.gratuito.Contains(query) || a.nivel.Contains(query)));
+            }
         }
 
         // GET: CursosController/Details/5
@@ -126,6 +133,11 @@ namespace AquiOuAcola.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult Favoritar(int id)
+        {
+            return RedirectToAction("Add", "CursoFavoritoController");
         }
     }
 }
