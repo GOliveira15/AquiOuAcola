@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AquiOuAcola.Entidades;
 
 namespace AquiOuAcola.Controllers
 {
@@ -16,17 +17,29 @@ namespace AquiOuAcola.Controllers
             db = contexto;
         }
 
-        public IActionResult Add(int id)
+        public IActionResult Favoritar()
         {
-            var identity = HttpContext.User.Identity as ClaimsIdentity;
-            if (identity != null)
-            {
-                IEnumerable<Claim> claims = identity.Claims;
-                // or
-                identity.FindFirst(a => a.Type == ClaimTypes.Sid);
+            return View();
+        }
 
+        public IActionResult Add(int id, CursoF collection)
+        {
+            var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+
+            if (claimsIdentity != null)
+            {
+                var IdUsuario = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Sid).Value;
+
+                CursoF _cursof = new CursoF();
+
+                _cursof.IdUsuario = Int32.Parse(IdUsuario);
+                _cursof.IdCurso = id;
+
+                db.CursoF.Add(_cursof);
+                db.SaveChanges();
             }
-            return View("~/Views/Usuarios/Perfil.cshtml");
+
+            return RedirectToAction("Perfil", "Usuarios");
         }
     }
 }

@@ -134,10 +134,5 @@ namespace AquiOuAcola.Controllers
                 return View();
             }
         }
-
-        public ActionResult Favoritar(int id)
-        {
-            return RedirectToAction("Add", "CursoFavoritoController");
-        }
     }
 }

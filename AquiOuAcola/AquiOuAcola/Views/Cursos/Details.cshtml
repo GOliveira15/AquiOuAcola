@@ -62,7 +62,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
     <a asp-action="Index">Back to List</a>
-    <a asp-action="Favoritar" class="btn btn-success">Favoritar</a>
+    <a asp-controller="CursoFavorito" asp-action="Add" asp-route-id="@Model.Id" class="btn btn-success">Favoritar</a>
 </div>

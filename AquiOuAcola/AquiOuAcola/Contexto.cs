@@ -12,5 +12,6 @@ namespace AquiOuAcola
         public Contexto(DbContextOptions<Contexto> options) : base(options) { }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Curso> Cursos { get; set; }
+        public DbSet<CursoF> CursoF { get; set; }
     }
 }
