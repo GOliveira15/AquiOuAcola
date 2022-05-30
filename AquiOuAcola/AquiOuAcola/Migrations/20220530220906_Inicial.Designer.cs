@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AquiOuAcola.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220528153759_MigracaoCursos")]
-    partial class MigracaoCursos
+    [Migration("20220530220906_Inicial")]
+    partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,6 +53,27 @@ namespace AquiOuAcola.Migrations
                     b.ToTable("Cursos");
                 });
 
+            modelBuilder.Entity("AquiOuAcola.Entidades.CursoF", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("CursoId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsuarioId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CursoId");
+
+                    b.HasIndex("UsuarioId");
+
+                    b.ToTable("CursoF");
+                });
+
             modelBuilder.Entity("AquiOuAcola.Entidades.Usuarios", b =>
                 {
                     b.Property<int>("Id")
@@ -80,6 +101,25 @@ namespace AquiOuAcola.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("AquiOuAcola.Entidades.CursoF", b =>
+                {
+                    b.HasOne("AquiOuAcola.Entidades.Curso", "Curso")
+                        .WithMany()
+                        .HasForeignKey("CursoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AquiOuAcola.Entidades.Usuarios", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Curso");
+
+                    b.Navigation("Usuario");
                 });
 #pragma warning restore 612, 618
         }
