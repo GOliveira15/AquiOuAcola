@@ -2,14 +2,16 @@
 using AquiOuAcola;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AquiOuAcola.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20220528153759_MigracaoCursos")]
+    partial class MigracaoCursos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,23 +51,6 @@ namespace AquiOuAcola.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Cursos");
-                });
-
-            modelBuilder.Entity("AquiOuAcola.Entidades.CursoF", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdCurso")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUsuario")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CursoF");
                 });
 
             modelBuilder.Entity("AquiOuAcola.Entidades.Usuarios", b =>

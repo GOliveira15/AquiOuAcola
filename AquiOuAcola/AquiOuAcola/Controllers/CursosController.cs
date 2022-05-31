@@ -53,12 +53,12 @@ namespace AquiOuAcola.Controllers
         // POST: CursosController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Curso collection, IFormFile foto)
+        public ActionResult Create(Curso collection, IFormFile foto)
         {
             try
             {
                 string caminhoParaSalvarImagem = caminhoServidor + "\\Imagens\\";
-                string novoNomeParaImagem = foto.FileName;
+                string novoNomeParaImagem = Guid.NewGuid().ToString() + "_" + foto.FileName;
 
                 if (!Directory.Exists(caminhoParaSalvarImagem))
                 {
@@ -67,17 +67,14 @@ namespace AquiOuAcola.Controllers
 
                 using (var stream = System.IO.File.Create(caminhoParaSalvarImagem + novoNomeParaImagem))
                 {
-                    await foto.CopyToAsync(stream);
+                    foto.CopyToAsync(stream);
                 }
 
                 collection.foto = novoNomeParaImagem;
 
-                var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
-                var IdUsuario = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Sid).Value;
-
                 Curso _cursos = new Curso();
 
-                _cursos.Id_Usuario = Int32.Parse(IdUsuario);
+                _cursos.Id_Usuario = collection.Id_Usuario;
                 _cursos.foto = collection.foto;
                 _cursos.nome = collection.nome;
                 _cursos.disponibilidade = collection.disponibilidade;

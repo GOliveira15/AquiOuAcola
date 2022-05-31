@@ -56,10 +56,7 @@
                     {
                         <tr>
                             <td>
-                                <a asp-controller="CursoFavorito" asp-action="Add" asp-route-id="@item.Id" class="btn btn-success">Favoritar</a>
-                            </td>
-                            <td>
-                                <img src="~/Imagens/@item.foto" width="100" height="100" />
+                                <img src="~/Imagens/@item.foto" />
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.nome)
@@ -88,22 +85,6 @@
                     }
                 </tbody>
             </table>
-            <!-- outra opção de exibição para cursos-->
-            @foreach (var item in Model)
-            {
-                <div class="card col-8 offset-2">
-                    <div class="card-header">@item.nome</div>
-                    <div class="card-body">
-                        <a href="@item.link">
-                            <img src="~/Imagens/@item.foto" width="500" height="500" />
-                        </a>
-                    </div>
-                    <div class="card-footer">
-                       <a asp-controller="CursoFavorito" asp-action="Add" asp-route-id="@item.Id" class="btn btn-success">Favoritar</a> @item.descricao
-                    </div>
-                </div>
-                <br />
-            }
 
         </div>
         <div class="col-md-1"></div>

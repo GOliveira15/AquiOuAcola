@@ -1,24 +1,6 @@
-﻿@model List<AquiOuAcola.Entidades.CursoF>
-@{
+﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Exemplo de Uso da Tabela Relacionada.</p>
-
-
-@foreach (var item in Model)
-{
-    <div class="card col-3 offset-4">
-        <div class="card-header">@item.Usuario.nome recomenda favoritou esse curso</div>
-        <div class="card-body">
-            <a href="@item.Curso.link">
-                <img src="~/Imagens/@item.Curso.foto" width="500" height="500" />
-            </a>
-        </div>
-        <div class="card-footer">
-            @item.Curso.nome
-        </div>
-    </div>
-    <br />
-}
+<p>Use this page to detail your site's privacy policy.</p>

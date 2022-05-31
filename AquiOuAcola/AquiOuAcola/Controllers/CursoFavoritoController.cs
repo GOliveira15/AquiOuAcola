@@ -32,14 +32,14 @@ namespace AquiOuAcola.Controllers
 
                 CursoF _cursof = new CursoF();
 
-                _cursof.UsuarioId = Int32.Parse(IdUsuario);
-                _cursof.CursoId = id;
+                _cursof.IdUsuario = Int32.Parse(IdUsuario);
+                _cursof.IdCurso = id;
 
                 db.CursoF.Add(_cursof);
                 db.SaveChanges();
             }
 
-            return Redirect("/Cursos");
+            return RedirectToAction("Perfil", "Usuarios");
         }
     }
 }

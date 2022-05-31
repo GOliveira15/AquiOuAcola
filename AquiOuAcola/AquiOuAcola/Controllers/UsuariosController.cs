@@ -126,7 +126,7 @@ namespace AquiOuAcola.Controllers
 
         public ActionResult Perfil(int id)
         {
-            return View();
+            return View(db.Usuarios.Where(a => a.Id == id).FirstOrDefault());
         }
 
         [Authorize(AuthenticationSchemes = "CookieAuthentication")]

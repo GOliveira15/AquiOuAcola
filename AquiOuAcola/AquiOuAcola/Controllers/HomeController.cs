@@ -1,7 +1,5 @@
-﻿using AquiOuAcola.Entidades;
-using AquiOuAcola.Models;
+﻿using AquiOuAcola.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -14,12 +12,10 @@ namespace AquiOuAcola.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly Contexto db;
 
-        public HomeController(ILogger<HomeController> logger, Contexto _contexto)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            db = _contexto;
         }
 
         public IActionResult Index()
@@ -29,12 +25,7 @@ namespace AquiOuAcola.Controllers
 
         public IActionResult Privacy()
         {
-            var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
-            var IdUsuario = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Sid).Value;
-
-            List<CursoF> model = db.CursoF.Include(a => a.Curso).Include(a => a.Usuario).ToList();
-            return View(model);
-           
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
