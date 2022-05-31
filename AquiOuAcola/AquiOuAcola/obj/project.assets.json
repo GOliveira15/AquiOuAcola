@@ -8128,26 +8128,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Fernando\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Gabri\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fernando\\Source\\Repos\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
+      "projectUniqueName": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
       "projectName": "AquiOuAcola",
-      "projectPath": "C:\\Users\\Fernando\\Source\\Repos\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
-      "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fernando\\Source\\Repos\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\obj\\",
+      "projectPath": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
+      "packagesPath": "C:\\Users\\Gabri\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8226,7 +8219,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

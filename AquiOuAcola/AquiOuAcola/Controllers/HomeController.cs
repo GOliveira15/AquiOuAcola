@@ -15,6 +15,7 @@ namespace AquiOuAcola.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly Contexto db;
+
         public HomeController(ILogger<HomeController> logger, Contexto _contexto)
         {
             _logger = logger;
@@ -28,6 +29,9 @@ namespace AquiOuAcola.Controllers
 
         public IActionResult Privacy()
         {
+            var claimsIdentity = User.Identity as System.Security.Claims.ClaimsIdentity;
+            var IdUsuario = claimsIdentity.FindFirst(System.Security.Claims.ClaimTypes.Sid).Value;
+
             List<CursoF> model = db.CursoF.Include(a => a.Curso).Include(a => a.Usuario).ToList();
             return View(model);
            
