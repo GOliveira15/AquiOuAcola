@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u0IHl47h1plb0pmlCM+1Z74WuytvXNwO7pYk7YIvZhhdXyeegyhVR6n/d+2bWdEKgJOfcD35qVPjYiDOqU/Bjw==",
+  "dgSpecHash": "P4sDJAEBDlPj4Y2NiKbUMbrUb2xhZ59bzaVGS6hLXqZuNDjnqFACcLs1vdby/pxqw8cb7BalkteAvPU5jJgXog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
+  "projectFilePath": "C:\\Users\\Gabri\\Documents\\Fatec\\PW\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabri\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Gabri\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
