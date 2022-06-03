@@ -2,7 +2,7 @@
     margin: 50px;
     display: block;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 #buscador{
@@ -150,4 +150,84 @@ footer{
     background-color: white;
     height: 100px;
     width: 100px;
+}
+
+#resultadoBusca{
+    margin-bottom: 25px;
+}
+
+#resultadoConteudo {
+    height: 200px;
+    width: 400px;
+    background-color: white;
+    padding: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#resultadoFoto img {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+#cursoConteudo{
+    background-color: white;
+    padding: 75px;
+    border-radius: 25px;
+}
+
+#cursoFoto img {
+    border-radius: 25px;
+    width: 100%;
+    object-fit: cover;
+}
+
+#cursoMain{
+    margin-top: 50px;
+}
+
+#cursoVoltar {
+    margin-top: 50px;
+}
+
+
+#cursoCPerfil {
+    width: 200px;
+    padding: 25px;
+    background-color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#cursoFPerfil img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#fotoPerfil img{
+    border-radius: 100%;
+}
+
+#cursoPerfil{
+    margin-top: 25px;
+}
+
+#entrar{
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+    margin-top: 50px;
+}
+
+#esqSenha{
+    font-size: 12px;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+#entrarBotoes{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    text-align: center;
 }

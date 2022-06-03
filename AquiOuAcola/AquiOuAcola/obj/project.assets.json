@@ -8133,11 +8133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabri\\Documents\\Fatec\\PW\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
+      "projectUniqueName": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
       "projectName": "AquiOuAcola",
-      "projectPath": "C:\\Users\\Gabri\\Documents\\Fatec\\PW\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
+      "projectPath": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\AquiOuAcola.csproj",
       "packagesPath": "C:\\Users\\Gabri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabri\\Documents\\Fatec\\PW\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\obj\\",
+      "outputPath": "C:\\Users\\Gabri\\Documents\\GitHub\\aqui-ou-acola\\AquiOuAcola\\AquiOuAcola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
